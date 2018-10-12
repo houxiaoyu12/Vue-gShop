@@ -2,13 +2,15 @@
 import {
   reqAddress,
   reqFoodCategorys,
-  reqShops
+  reqShops,
+  reqUser,
 } from '../api'
 
 import {
   RECEIVE_SHOPS,
   RECEIVE_CATEGORYS,
-  RECEIVE_ADDRESS
+  RECEIVE_ADDRESS,
+  RECEIVE_USER
 } from './mutation-types'
 
 export default {
@@ -43,5 +45,8 @@ export default {
       //commit给mutationpl
       commit(RECEIVE_SHOPS,{shops})
     }
+  },
+  saveUser ({commit},user) {
+    commit(RECEIVE_USER,{user})
   }
 }
