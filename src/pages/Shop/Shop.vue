@@ -20,12 +20,18 @@
 <script>
   import ShopHeader from '../../components/ShopHeader/ShopHeader'
 
-  import {reqInfo} from '../../api'
+  //import {reqInfo} from '../../api' //测试mock数据是否正确
 
   export default {
-    async mounted () {
-      const result = await reqInfo()
-      console.log('shop',result)
+    //测试mock数据是否正确
+    // async mounted () {
+    //   const result = await reqInfo()
+    //   console.log('shop',result)
+    // },
+    mounted () {
+      //this.$store.dispatch('getGoods')
+      this.$store.dispatch('getInfo')
+      //this.$store.dispatch('getRatings')
     },
 
     components: {
