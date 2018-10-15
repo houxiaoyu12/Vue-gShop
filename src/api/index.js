@@ -50,3 +50,4 @@ export const reqInfo = () => ajax('/info')
 
 
 
+
