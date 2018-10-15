@@ -42,12 +42,18 @@ export default {
     if(food.count){
       food.count++
     } else {
-      Vue.set(food,'count',1)
+      //界面不会更新，因为新添加的属性没有数据绑定
+      Vue.set(food,'count',1)//让新添加的属性有数据绑定，使页面发生更新
+      //将新添加的food的添加到购物车中
+      state.cartFoods.push(food)
     }
   },
   [DECREMENT_FOOD_COUNT] (state,{food}) {
     if(food.count){
       food.count--
+      if(food.count===0){
+        state.cartFoods.splice(state.cartFoods.indexOf(food),1)
+      }
     }
   }
 }
