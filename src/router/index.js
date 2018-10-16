@@ -3,12 +3,17 @@
  */
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import MSite from '../pages/MSite/MSite.vue'
-import Search from '../pages/Search/Search.vue'
-import Order from '../pages/Order/Order.vue'
-import Profile from '../pages/Profile/Profile.vue'
-import Login from '../pages/Login/Login.vue'
 
+
+// 一旦使用import()加载一个模块, 那个模块就会被单独打包
+// 配置的组件是一个函数, 只有当请求对应path时才会执行
+const MSite = () => import('../pages/MSite/MSite.vue')
+const Search = () => import('../pages/Search/Search.vue')
+const Order = () => import('../pages/Order/Order.vue')
+const Profile = () => import('../pages/Profile/Profile.vue')
+
+
+import Login from '../pages/Login/Login.vue'
 import Shop from '../pages/Shop/Shop'
 import ShopGoods from '../pages/Shop/ShopGoods/ShopGoods'
 import ShopInfo from '../pages/Shop/ShopInfo/ShopInfo'

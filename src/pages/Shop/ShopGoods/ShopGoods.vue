@@ -114,7 +114,7 @@
 
         // 绑定scroll的监听
         this.rightScroll.on('scroll', ({x, y}) => {
-          console.log('scroll', x, y)
+          //console.log('scroll', x, y)
 
           // 更新scrollY
           this.scrollY = Math.abs(y)
@@ -122,7 +122,7 @@
 
         // 绑定滚动结束的监听
         this.rightScroll.on('scrollEnd', ({x, y}) => {
-          console.log('scrollEnd', x, y)
+          //console.log('scrollEnd', x, y)
 
           // 更新scrollY
           this.scrollY = Math.abs(y)
@@ -143,7 +143,7 @@
 
         // 更新状态
         this.tops = tops
-        console.log('tops=', tops)
+        //console.log('tops=', tops)
       },
 
       // 选择左侧某个分类项

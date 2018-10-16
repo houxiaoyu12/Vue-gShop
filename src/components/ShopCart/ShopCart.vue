@@ -76,7 +76,7 @@
         }
       },
       listShow () {
-        console.log('listShow()')
+        //console.log('listShow()')
         // 如果总数量为0, 直接返回false
         if(this.totalCount===0) {
           // 设置isShow为false
